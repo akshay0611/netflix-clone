@@ -1,0 +1,114 @@
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    padding: 16px 48px;
+  }
+  
+  .navbar__logo img {
+    height: 55px; /* Adjust the logo size */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+  }
+  
+  .navbar__logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white; /* Ensure link text (if any) is white */
+  }
+  
+  .navbar__logo:focus {
+    outline: none;
+  }
+    
+  .navbar__menu {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .navbar__menu-item {
+    font-size: 1rem;
+    color: #ffffff; /* Light gray color */
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+  
+  .navbar__menu-item:hover {
+    color: #e50914; 
+  }
+  
+  .search-input {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    color: white;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .search-input:focus {
+    border: 2px solid #e50914; /* Red border on focus */
+  }
+
+  
+/* Notification dropdown styles */
+.notification-dropdown {
+  position: absolute;
+  top: 50px; /* Position it just below the bell button */
+  right: 0; /* Align to the right of the bell button */
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for the dropdown */
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  display: none; /* Initially hidden */
+  z-index: 60; /* Ensure it's above other content */
+}
+
+.notification-dropdown.open {
+  display: block; /* Show when the "open" class is added */
+}
+
+.notification-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item p {
+  margin: 0;
+}
+
+.notification-item span {
+  font-size: 12px;
+  color: #999;
+}
+
+.notification-dropdown h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e50914; /* Netflix red for title */
+  margin-bottom: 8px;
+}
+
+.notification-dropdown .no-notifications {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.notification-item:hover {
+  background-color: #444; /* Slight hover effect */
+  cursor: pointer;
+}
